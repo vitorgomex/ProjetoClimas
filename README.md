@@ -15,19 +15,25 @@ Avaliar o impacto do uso de múltiplas threads na performance de um algoritmo qu
 
 ## Organização do Projeto
 
-ProjetoClimas/
-├── src/
-│ └── br/com/vitor/temperatura/
-│ ├── Capital.java
-│ ├── CapitalUtils.java
-│ ├── TemperaturaCapitais.java
-│ ├── TemperaturaCapitais3Threads.java
-│ ├── TemperaturaCapitais9Threads.java
-│ └── TemperaturaCapitais27Threads.java
-├── json-20250517.jar
-├── out/
-│ ├── *.class
-└── README.md
+## Organização do Projeto
+
+- ProjetoClimas/
+  - src/
+    - br/
+      - com/
+        - vitor/
+          - temperatura/
+            - Capital.java  
+            - CapitalUtils.java  
+            - TemperaturaCapitais.java  
+            - TemperaturaCapitais3Threads.java  
+            - TemperaturaCapitais9Threads.java  
+            - TemperaturaCapitais27Threads.java  
+  - json-20250517.jar  
+  - out/
+    - (arquivos .class gerados)
+  - README.md
+
 
 ## Como Compilar e Executar
 
