@@ -29,8 +29,6 @@ ProjetoClimas/
 └── README.md
 
 bash
-Copiar
-Editar
 
 ## Como Compilar e Executar
 
