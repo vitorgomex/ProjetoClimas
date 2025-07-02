@@ -26,9 +26,8 @@ ProjetoClimas/
 │ └── TemperaturaCapitais27Threads.java
 ├── json-20250517.jar
 ├── out/
+│ ├── *.class
 └── README.md
-
-bash
 
 ## Como Compilar e Executar
 
