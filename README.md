@@ -49,7 +49,7 @@ java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais3
 java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais9Threads
 java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais27Threads
 Resultados Obtidos
-Abaixo estão os tempos médios de execução das quatro versões do programa:
+Abaixo estão os tempos médios de execução das quatro versões:
 
 Versão	Nº de Threads	Tempo Médio de Execução
 Sequencial	1	6362 ms
