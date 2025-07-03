@@ -1,41 +1,73 @@
-# Projeto Climas 🌤️
+# Projeto Climas - Comparativo de Execução com Threads em Java
 
-Este projeto coleta e processa dados climáticos das 27 capitais brasileiras utilizando a API da Open-Meteo. O objetivo é comparar o desempenho de diferentes versões concorrentes do algoritmo, variando o número de threads utilizadas.
-
-## 📌 Objetivos
-- Coletar dados de temperatura de janeiro de 2024 via API Open-Meteo.
-- Comparar desempenho entre execuções com 1, 3, 9 e 27 threads.
-- Analisar o impacto da paralelização no tempo de execução do algoritmo.
-
-## 🧪 Versões Implementadas
-- `TemperaturaCapitais.java`: versão sequencial (1 thread)
-- `TemperaturaCapitais3Threads.java`: versão concorrente com 3 threads
-- `TemperaturaCapitais9Threads.java`: versão concorrente com 9 threads
-- `TemperaturaCapitais27Threads.java`: versão concorrente com 27 threads
-
-## 📈 Resultados Médios Obtidos
-
-| Nº de Threads | Tempo Médio (ms) |
-|---------------|------------------|
-| 1             | 6218             |
-| 3             | 2222             |
-| 9             | 1624             |
-| 27            | 1691             |
-
-> Os testes demonstram uma redução significativa do tempo com aumento de threads até certo ponto. Após 9 threads, o ganho se estabiliza, indicando saturação dos recursos de hardware disponíveis.
-
-## 📄 Relatório Técnico
-
-O relatório técnico completo contendo fundamentação teórica, explicações e gráficos comparativos está disponível em:
-👉 [`Relatorio_Tecnico_Projeto_Climas.pdf`](./Relatorio_Tecnico_Projeto_Climas.pdf)
+Este projeto tem como objetivo analisar o impacto da programação concorrente, por meio do uso de múltiplas threads, na coleta e processamento de dados climáticos das 27 capitais brasileiras utilizando a API Open-Meteo.
 
 ## 🔧 Tecnologias Utilizadas
 - Java 17
-- API Open-Meteo
-- Multithreading
-- JSON (org.json)
+- Biblioteca externa: `org.json` (json-20250517.jar)
+- API Open-Meteo: https://open-meteo.com/
+- IDE recomendada: Visual Studio Code ou qualquer editor compatível com Java
+- Linha de comando (PowerShell ou Terminal)
 
-## 📚 Referências
-- Tanenbaum, A. S. & Bos, H. *Modern Operating Systems*, Pearson, 2015.
-- Open-Meteo API: https://open-meteo.com/
-- Oracle Java Docs: https://docs.oracle.com/javase/8/docs/api/
+## 📁 Estrutura de Pastas
+ProjetoClimas/
+│
+├── src/
+│ └── br/com/vitor/temperatura/
+│ ├── TemperaturaCapitais.java
+│ ├── TemperaturaCapitais3Threads.java
+│ ├── TemperaturaCapitais9Threads.java
+│ └── TemperaturaCapitais27Threads.java
+│
+├── out/ # Arquivos .class compilados
+├── json-20250517.jar # Biblioteca para manipulação de JSON
+├── Relatorio_Tecnico_Projeto_Climas.pdf
+└── grafico.png # Gráfico comparativo dos tempos
+
+## 📈 Objetivo do Experimento
+
+Avaliar o desempenho de quatro versões de um mesmo algoritmo Java, variando a quantidade de threads utilizadas para processar requisições simultâneas à API Open-Meteo:
+
+- `TemperaturaCapitais.java`: execução sequencial (1 thread)
+- `TemperaturaCapitais3Threads.java`: uso de 3 threads
+- `TemperaturaCapitais9Threads.java`: uso de 9 threads
+- `TemperaturaCapitais27Threads.java`: uso de 27 threads (uma por capital)
+
+O programa coleta dados de temperatura de janeiro de 2024 e calcula média, mínima e máxima por dia.
+
+## ▶️ Como Executar
+
+Antes de tudo, compile os arquivos Java:
+
+```bash
+javac -cp ".;json-20250517.jar" -d out src/br/com/vitor/temperatura/*.java
+Depois, execute uma das versões:
+
+bash
+Copiar
+Editar
+# Versão sequencial
+java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais
+
+# Versão com 3 threads
+java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais3Threads
+
+# Versão com 9 threads
+java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais9Threads
+
+# Versão com 27 threads
+java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais27Threads
+
+📊 Resultados Obtidos
+Nº de Threads	Tempo Médio (ms)
+1	6218
+3	2222
+9	1624
+27	1591
+
+O gráfico com esses resultados está disponível em grafico.png.
+
+📄 Relatório
+O relatório técnico contendo a explicação teórica, análise dos resultados e referências bibliográficas está disponível no arquivo:
+
+👉 Relatorio_Tecnico_Projeto_Climas.pdf
