@@ -32,10 +32,6 @@ grafico.png: gráfico comparativo dos tempos de execução
 README.md: este arquivo com as instruções do projeto
 
 
-bash
-Copiar
-Editar
-
 ## ▶️ Como Compilar e Executar
 
 ### Compilação
