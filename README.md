@@ -20,7 +20,7 @@ Este projeto coleta e processa dados climáticos das 27 capitais brasileiras uti
 | 1             | 6218             |
 | 3             | 2222             |
 | 9             | 1624             |
-| 27            | 1591             |
+| 27            | 1691             |
 
 > Os testes demonstram uma redução significativa do tempo com aumento de threads até certo ponto. Após 9 threads, o ganho se estabiliza, indicando saturação dos recursos de hardware disponíveis.
 
