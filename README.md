@@ -58,16 +58,24 @@ java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais9
 # Versão com 27 threads
 java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais27Threads
 
-📊 Resultados Obtidos
-Nº de Threads	Tempo Médio (ms)
-1	6218
-3	2222
-9	1624
-27	1591
+📉 Gráfico Comparativo
+O gráfico com os tempos médios pode ser visualizado em:
 
-O gráfico com esses resultados está disponível em grafico.png.
 
-📄 Relatório
-O relatório técnico contendo a explicação teórica, análise dos resultados e referências bibliográficas está disponível no arquivo:
+Figura 1 – Comparação do Tempo Médio de Execução por Quantidade de Threads.
+Fonte: Experimentos manuais realizados por Vitor Hugo (2025)
 
-👉 Relatorio_Tecnico_Projeto_Climas.pdf
+📄 Relatório Completo
+O relatório técnico contendo a explicação teórica, a fundamentação bibliográfica, a descrição dos testes e a análise crítica dos resultados está disponível em:
+
+📎 Relatorio_Tecnico_Projeto_Climas.pdf
+
+Esse relatório atende aos critérios exigidos, incluindo:
+
+Discussão sobre threads e computação paralela/concurrente
+
+Análise dos ganhos de desempenho
+
+Gráfico de comparação de desempenho
+
+Referências bibliográficas
