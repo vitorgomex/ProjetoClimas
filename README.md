@@ -1,81 +1,58 @@
-# Projeto Climas - Comparativo de Execução com Threads em Java
+# 🌦️ Projeto Climas – Análise de Performance com Threads em Java
 
-Este projeto tem como objetivo analisar o impacto da programação concorrente, por meio do uso de múltiplas threads, na coleta e processamento de dados climáticos das 27 capitais brasileiras utilizando a API Open-Meteo.
+Este projeto compara o desempenho de diferentes implementações de um algoritmo de coleta e processamento de dados climáticos das 27 capitais brasileiras, utilizando a API [Open-Meteo](https://open-meteo.com/). As versões variam pela quantidade de threads utilizadas.
 
-## 🔧 Tecnologias Utilizadas
-- Java 17
-- Biblioteca externa: `org.json` (json-20250517.jar)
-- API Open-Meteo: https://open-meteo.com/
-- IDE recomendada: Visual Studio Code ou qualquer editor compatível com Java
-- Linha de comando (PowerShell ou Terminal)
+## 🧠 Objetivo
 
-## 📁 Estrutura de Pastas
-ProjetoClimas/
-│
-├── src/
-│ └── br/com/vitor/temperatura/
-│ ├── TemperaturaCapitais.java
-│ ├── TemperaturaCapitais3Threads.java
-│ ├── TemperaturaCapitais9Threads.java
-│ └── TemperaturaCapitais27Threads.java
-│
-├── out/ # Arquivos .class compilados
-├── json-20250517.jar # Biblioteca para manipulação de JSON
-├── Relatorio_Tecnico_Projeto_Climas.pdf
-└── grafico.png # Gráfico comparativo dos tempos
+Avaliar como o uso de múltiplas threads influencia o tempo de execução de um programa Java, aplicando conceitos de computação concorrente e paralela.
 
-## 📈 Objetivo do Experimento
+## 🗂️ Estrutura do Projeto
 
-Avaliar o desempenho de quatro versões de um mesmo algoritmo Java, variando a quantidade de threads utilizadas para processar requisições simultâneas à API Open-Meteo:
-
-- `TemperaturaCapitais.java`: execução sequencial (1 thread)
-- `TemperaturaCapitais3Threads.java`: uso de 3 threads
-- `TemperaturaCapitais9Threads.java`: uso de 9 threads
-- `TemperaturaCapitais27Threads.java`: uso de 27 threads (uma por capital)
-
-O programa coleta dados de temperatura de janeiro de 2024 e calcula média, mínima e máxima por dia.
+- `src/br/com/vitor/temperatura/` – Contém as quatro versões do programa:
+  - `TemperaturaCapitais.java` – 1 thread
+  - `TemperaturaCapitais3Threads.java` – 3 threads
+  - `TemperaturaCapitais9Threads.java` – 9 threads
+  - `TemperaturaCapitais27Threads.java` – 27 threads
+- `json-20250517.jar` – Biblioteca usada para manipulação de JSON.
+- `out/` – Pasta para os arquivos `.class` compilados.
+- `Relatorio_Tecnico_Projeto_Climas.pdf` – Relatório final do projeto com explicações teóricas, comparações e gráficos.
 
 ## ▶️ Como Executar
 
-Antes de tudo, compile os arquivos Java:
+### Compilar
+
+No terminal, dentro da raiz do projeto:
 
 ```bash
 javac -cp ".;json-20250517.jar" -d out src/br/com/vitor/temperatura/*.java
-Depois, execute uma das versões:
-
+Rodar (exemplo com 27 threads)
 bash
 Copiar
 Editar
-# Versão sequencial
-java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais
-
-# Versão com 3 threads
-java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais3Threads
-
-# Versão com 9 threads
-java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais9Threads
-
-# Versão com 27 threads
 java -cp ".;json-20250517.jar;out" br.com.vitor.temperatura.TemperaturaCapitais27Threads
+Altere o nome da classe para rodar outras versões.
 
-📉 Gráfico Comparativo
-O gráfico com os tempos médios pode ser visualizado em:
+📊 Resultados
+As execuções foram feitas em 10 rodadas para cada versão, com os seguintes tempos médios:
 
+Versão	Threads	Tempo Médio (ms)
+Sequencial	1	6218
+Concorrente 1	3	2222
+Concorrente 2	9	1624
+Paralela	27	1591
 
-Figura 1 – Comparação do Tempo Médio de Execução por Quantidade de Threads.
-Fonte: Experimentos manuais realizados por Vitor Hugo (2025)
+Gráfico de comparação incluído no relatório técnico.
 
-📄 Relatório Completo
-O relatório técnico contendo a explicação teórica, a fundamentação bibliográfica, a descrição dos testes e a análise crítica dos resultados está disponível em:
+📄 Relatório
+Todo o detalhamento teórico, análise dos resultados e gráfico comparativo estão no arquivo:
 
 📎 Relatorio_Tecnico_Projeto_Climas.pdf
 
-Esse relatório atende aos critérios exigidos, incluindo:
+📚 Referências
+Tanenbaum, A. S., & Bos, H. (2015). Modern Operating Systems. Pearson.
 
-Discussão sobre threads e computação paralela/concurrente
+Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System Concepts. Wiley.
 
-Análise dos ganhos de desempenho
+Open-Meteo API: https://open-meteo.com/
 
-Gráfico de comparação de desempenho
-
-Referências bibliográficas
+Artigo sobre multithreading
