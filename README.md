@@ -27,8 +27,6 @@ json-20250517.jar: biblioteca externa para manipulação de JSON
 
 Relatorio_Tecnico_Projeto_Climas.pdf: relatório técnico com análise completa
 
-grafico.png: gráfico comparativo dos tempos de execução
-
 README.md: este arquivo com as instruções do projeto
 
 
