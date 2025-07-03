@@ -55,7 +55,7 @@ Resultados Obtidos
 Abaixo estão os tempos médios de execução das quatro versões:
 
 Versão	Nº de Threads	Tempo Médio de Execução
-Sequencial	1	6362 ms
-Concorrente	3	4716 ms
-Concorrente	9	1864 ms
-Concorrente	27	1134 ms
+Sequencial	1	6218 ms
+Concorrente	3	2222 ms
+Concorrente	9	1624 ms
+Concorrente	27	1691 ms
