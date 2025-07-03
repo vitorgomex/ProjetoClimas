@@ -6,20 +6,30 @@ Este projeto compara o desempenho de diferentes implementações de um algoritmo
 
 Avaliar como o uso de múltiplas threads influencia o tempo de execução de um programa Java, aplicando conceitos de computação concorrente e paralela.
 
-ProjetoClimas/
-├── src/
-│   └── br/com/vitor/temperatura/
-│       ├── Capital.java
-│       ├── CapitalUtils.java
-│       ├── TemperaturaCapitais.java
-│       ├── TemperaturaCapitais3Threads.java
-│       ├── TemperaturaCapitais9Threads.java
-│       └── TemperaturaCapitais27Threads.java
-├── out/                           # Arquivos .class compilados
-├── json-20250517.jar              # Biblioteca para manipulação de JSON
-├── Relatorio_Tecnico_Projeto_Climas.pdf  # Relatório técnico completo
-├── grafico.png                    # Gráfico comparativo dos tempos médios
-└── README.md
+📁 Estrutura de Pastas
+src/br/com/vitor/temperatura/
+
+Capital.java
+
+CapitalUtils.java
+
+TemperaturaCapitais.java
+
+TemperaturaCapitais3Threads.java
+
+TemperaturaCapitais9Threads.java
+
+TemperaturaCapitais27Threads.java
+
+out/: arquivos .class compilados
+
+json-20250517.jar: biblioteca externa para manipulação de JSON
+
+Relatorio_Tecnico_Projeto_Climas.pdf: relatório técnico com análise completa
+
+grafico.png: gráfico comparativo dos tempos de execução
+
+README.md: este arquivo com as instruções do projeto
 
 
 bash
